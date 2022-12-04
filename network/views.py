@@ -99,9 +99,6 @@ def edit_post(request):
             })
     
            
-           
-    
-@login_required(login_url='/login')
 def profile(request,user_id):
     
     follow_user = User.objects.get(id = user_id)    
@@ -116,7 +113,7 @@ def profile(request,user_id):
         list_post.append({'id':post.id, 'user_id' : post.user.id ,'username' :post.user.username , 'content' : post.content ,
                           'date' : post.createdate.date() , 'time' : post.createdate.time(), 'likecount' : like_count , 'isLiked':is_liked })
         
-    user = User.objects.get(id = request.user.id)
+    user = User.objects.filter(id = request.user.id).first()
     follower = follow_user.followings.filter(user = user).first()
     # Pagination
     paginator = Paginator(list_post, 10) # Show 10 posts per page.

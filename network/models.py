@@ -25,28 +25,10 @@ class Follow(models.Model):
     def __str__(self):
         return f"user : {self.user.username}"
  
-    
-# class Followings(models.Model):
-#     user = models.ForeignKey(User,on_delete=models.CASCADE)
-    
-    
-#     def __str__(self):
-#         return f"user : {self.user.username}"
-    
 class Like(models.Model):
     user = models.ForeignKey(User,on_delete=models.CASCADE)
     post = models.ForeignKey(Post,on_delete=models.CASCADE)
     
     def __str__(self):
         return f"user : {self.user.username} , post : {self.post.content}"
-    
-# class Follow(models.Model):
-#     user = models.ForeignKey(User,on_delete=models.CASCADE)
-#     post = models.ForeignKey(Post,on_delete=models.CASCADE)
-#     follow = models.BooleanField()
-#     createdate = models.DateTimeField(auto_now_add = True)
-   
-#     def __str__(self):
-#         return f"user : {self.user.username} , post : {self.post.content}"
-    
     
