@@ -35,6 +35,8 @@ class NetworkSeleniumTestCase(unittest.TestCase):
         driver = self.driver
         url = "http://127.0.0.1:8000"
         
+        chrome_version = driver.capabilities['browserVersion']
+        print("Chrome version:", chrome_version)
         # login
         driver.get(url)
         time.sleep(2)
