@@ -5,5 +5,5 @@
   <p>Run <code>python manage.py makemigrations network</code> to make migrations for the network app.</p>
   <p>Run <code>python manage.py migrate</code> to apply migrations to your database.</p>
   <p>Run <code>python manage.py runserver</code></p>
-<p>  To run tests with Selenium in a Django project Install Selenium <code>pip install selenium </code> and Install a WebDriver</p>
+  <p>To run tests with Selenium in a Django project Install Selenium <code>pip install selenium </code> and Install a WebDriver.</p>
   <p>To execute the tests, run <code>python manage.py test</code></p>
